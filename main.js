@@ -49,7 +49,7 @@ function adicionaLinha(){
         linha += `<td>${inputNotaAtividade.value >= notaMinima ? imgAprovado : imgReprovado}</td>`; //cria a terceira coluna na linha com o resultado
         linha += '</tr>'; //fecha a linha
 
-        linhas += linha; //Adicioana a linha criada a linha existente
+        linhas += linha; //Adicioana a linha criada a linha existente 
     }
 
     inputNomeAtividade.value = ''; //Limpa o campo apos submeter o valor
@@ -66,7 +66,7 @@ function atualizaTabela(){
 function atualizaMediaFinal(){
     const mediaFinal = calculaMediaFinal();
 
-    document.getElementById('media-final-valor').innerHTML = mediaFinal;
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2); //tofixed limita as casas decimais
     document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
 
 } 
